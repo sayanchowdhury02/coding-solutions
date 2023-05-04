@@ -1,0 +1,31 @@
+int getLongestSubarray(vector<int> &nums, int k) {
+        unordered_map<int,int>m;
+        int sum=0,i=0,j=0,n=nums.size();
+            int high=0;
+
+        while(j<n)//&&i<=j)
+        {
+            sum+=nums[j];
+            if(sum<k)
+            {
+                //sum+=nums[j];
+                j++;
+
+            }
+        
+            if (sum == k) {
+            high=max(high,j-i+1);
+            j++;
+            }
+            if(sum>k)
+            {
+            while (sum > k) {
+                sum -= nums[i];
+                i++;
+            }
+            j++;
+            }
+        }
+        
+        return high;
+        }
