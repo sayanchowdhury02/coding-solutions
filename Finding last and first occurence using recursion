@@ -1,0 +1,31 @@
+#include <bits/stdc++.h>
+using namespace std;
+int last(vector<int>&a,int n,int k)
+{
+	if(n<0) return -1;
+
+		if (a[n]==k)
+			return  n;
+	
+	last(a,n-1,k);
+}
+int first(vector<int>&a,int n2,int k2)
+{
+	if(n2==a.size())
+		return -1;
+	if(a[n2]==k2)
+		return n2;
+	first(a,n2+1,k2);
+	
+}
+
+int main(){
+	vector<int>a;//={9,0,1,4,90,67,2,120};
+	a={2,3,4,1,2,3,1,1,1,4,6};
+	int k =19;
+
+
+	int n=a.size();
+	cout<<last(a,n-1,k)<<"\n";
+	cout<<first(a,0,k);
+	}
