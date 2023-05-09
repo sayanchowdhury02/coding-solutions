@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include <bits/stdc++.h> 
 using namespace std;
 int last(vector<int>&a,int n,int k)
 {
@@ -20,12 +20,12 @@ int first(vector<int>&a,int n2,int k2)
 }
 
 int main(){
-	vector<int>a;//={9,0,1,4,90,67,2,120};
+	vector<int>a;
 	a={2,3,4,1,2,3,1,1,1,4,6};
 	int k =19;
 
 
 	int n=a.size();
-	cout<<last(a,n-1,k)<<"\n";
-	cout<<first(a,0,k);
+	cout<<last(a,n-1,k)<<"\n"; //starting from last.
+	cout<<first(a,0,k); //starting from first.
 	}
