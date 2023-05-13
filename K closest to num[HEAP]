@@ -1,0 +1,40 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+	  #ifndef ONLINE_JUDGE
+freopen("input.txt", "r", stdin);
+freopen("output.txt", "w", stdout);
+#endif
+	priority_queue<pair<int,int>>p;
+	int size=0,k=0,num=0;
+	cin>>size>>k>>num;
+	pair<int,int>curr;
+	int arr[size]={0};
+	for (int i = 0; i < size; ++i)
+	{
+		cin>>arr[i];
+		/*
+					if(arr[i]==num) 
+				continue;    [IF YOU WANT TO IGNORE NUM]*/
+
+				p.push(make_pair(abs(arr[i]-num),arr[i]));
+
+			
+
+				if(p.size()>k)
+			{
+				p.pop();
+			}
+
+	}
+	
+	while(!p.empty())
+	{
+		curr=p.top();
+		cout<<curr.second<<" ";
+		p.pop();
+	}
+
+
+}
