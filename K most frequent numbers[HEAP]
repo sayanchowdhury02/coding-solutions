@@ -1,4 +1,8 @@
-#include<bits/stdc++.h>
+/*this can be performed using both min heap and max heap
+using max heap:  use max heap to populate the heap based on frequency; pop k number of items to result.
+using min heap : use minheap to populate the heap. if number of items in heap  exceeds 'k' ; pop it; use the k items remaining in heap as result
+
+#include<bits/stdc++.h> 
 
 using namespace std;
 typedef pair<int, int> pi;
