@@ -1,0 +1,29 @@
+// Your First C++ Program
+
+#include <bits/stdc++.h>
+using namespace std;
+void sub(vector<int>&v,int ind,vector<int>ans)
+{
+    if(ind >=4)
+    {
+        for(auto it:ans)
+        cout<<it;
+        cout<<"\n";
+        return;
+    }
+    ans.push_back(v[ind]);
+    sub(v,ind+1,ans);
+    ans.pop_back();
+    sub(v,ind+1,ans);
+
+}
+
+int main() {
+    vector<int>v{1,2,3,4};
+    vector<int>ans;
+    int ind=0;
+        sub(v,ind,ans);
+    
+    return 0;
+    
+}
